@@ -1,0 +1,20 @@
+{
+  "name": "github-npm",
+  "description": "Allow to open npm packages directly from github.",
+  "version": "1.0",
+  "manifest_version": 2,
+  "author": "Shobhit Chittora",
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.github.com/**/blob/**/package.json"
+      ],
+      "js": [
+        "npm.js"
+      ]
+    }
+  ],
+  "permissions": [
+    "webNavigation"
+  ]
+}
